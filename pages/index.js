@@ -16,7 +16,7 @@ const fetcher = async (...args) => {
 };
 
 function Profile() {
-  const { data } = useSWR('http://localhost:3000/api/collection', fetcher, { suspense: true });
+  const { data } = useSWR('https://ercnshn.com/api/collection', fetcher, { suspense: true });
   const posts = JSON.parse(data);
   return (
     posts && posts.map((post) => (<div className={styles.card}>
