@@ -16,13 +16,15 @@ const fetcher = async (...args) => {
 };
 
 function Profile() {
-  const { data } = useSWR('https://ercnshn.com/api/collection', fetcher, { suspense: true });
+  const { data } = useSWR(process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api/collection' :'https://ercnshn.com/api/collection', fetcher, { suspense: true });
   const posts = JSON.parse(data);
   return (
-    posts && posts.map((post) => (<div className={styles.card}>
+    posts && posts.map((post) => (
+    <div className={styles.card} key={post.id}>
       <h2>{post.title}</h2>
       <p>{post.content}</p>
-    </div>))
+    </div>
+    ))
   );
 }
 
