@@ -10,10 +10,9 @@ export default function Header() {
     setMenuVisibility((prevMenuVisibility) => !prevMenuVisibility);
   };
 
-  console.log(menuVisibility);
   return (
     <>
-      <div className="block w-screen h-2 mb-4 bg-indigo-900 "></div>
+      <div className="block w-screen h-2 mb-4 bg-gradient-to-r from-indigo-700 via-cyan-500 to-purple-600 "></div>
 
       <div className="flex items-center justify-between px-4 mb-4 md:justify-center">
         <div className="dark:text-white md:hidden md:static font-xl">
@@ -37,31 +36,31 @@ export default function Header() {
         <nav
           className={
             (menuVisibility ? 'absolute' : 'hidden') +
-            ' bottom-0 left-0 right-0 z-30 p-3 bg-indigo-900 md:static md:inline-block md:bg-transparent'
+            ' bottom-0 left-0 top-16 right-0 z-30 p-3 bg-indigo-900 md:static md:inline-block md:bg-transparent'
           }
         >
           <ul className="flex flex-col text-2xl font-bold md:gap-6 md:text-lg md:justify-center md:flex-row flex-around dark:text-white">
-            <li className="p-4 border-b-2 border-indigo-300 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-teal-500 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/">
                 <a>Home</a>
               </Link>
             </li>
-            <li className="p-4 border-b-2 border-indigo-300 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-fuchsia-500 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
-            <li className="p-4 border-b-2 border-indigo-300 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-cyan-500 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/snippets">
                 <a>Snippets</a>
               </Link>
             </li>
-            <li className="p-4 border-b-2 border-indigo-300 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-pink-400 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/cheatsheets">
                 <a>Cheatsheets</a>
               </Link>
             </li>
-            <li className="p-4 md:p-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-violet-500 md:p-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/contact">
                 <a>Contact</a>
               </Link>
