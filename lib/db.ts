@@ -14,7 +14,7 @@ export default async function query( query: String ) {
   try {
     const results = await db.query(query);
     await db.end();
-    return JSON.parse(JSON.stringify(results));
+    return results;
   } catch (error) {
     return { error };
   }

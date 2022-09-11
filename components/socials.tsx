@@ -1,9 +1,9 @@
 export default function Socials() {
   return (
-    <p className="flex justify-start gap-2">
+    <p className="flex justify-start gap-8 md:gap-2">
       <a href="https://twitter.com/ercnshntw" target="_blank" rel="noreferrer">
         <svg
-          className="hover:fill-[#1DA1F2] fill-indigo-300 transition-on click-effect h-5 w-5"
+          className="hover:fill-[#1DA1F2] fill-indigo-300 transition-on click-effect md:h-5 md:w-5 w-10 h-10"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ export default function Socials() {
       </a>
       <a href="https://twitter.com/ercnshntw" target="_blank" rel="noreferrer">
         <svg
-          className="w-5 h-5 hover:fill-neutral-200 dark:fill-indigo-300 transition-on click-effect"
+          className="w-10 h-10 md:w-5 md:h-5 hover:fill-neutral-200 dark:fill-indigo-300 transition-on click-effect"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
