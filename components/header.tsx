@@ -60,7 +60,7 @@ export default function Header() {
                 <a>Cheatsheets</a>
               </Link>
             </li>
-            <li className="p-4 border-b-2 border-violet-500 md:p-0 transition-on click-effect dark:hover:text-indigo-300">
+            <li className="p-4 border-b-2 border-violet-500 md:p-0 md:border-b-0 transition-on click-effect dark:hover:text-indigo-300">
               <Link href="/contact">
                 <a>Contact</a>
               </Link>
@@ -68,7 +68,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="text-2xl font-bold dark:text-white ">
+        <div className="text-2xl font-bold md:ml-3 dark:text-white transition-on click-effect">
           {colorTheme === 'light' ? (
             <svg
               onClick={() => setTheme('light')}
