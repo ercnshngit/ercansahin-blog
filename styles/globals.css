@@ -4,12 +4,12 @@
 
 html,
 body {
-  @apply bg-neutral-100 dark:bg-neutral-900 h-screen;
+  @apply bg-neutral-100 dark:bg-neutral-900 h-screen select-none overflow-auto;
 }
 
 @layer components {
   .transition-on {
-    @apply transition duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
   }
   .click-effect {
     @apply active:scale-90;
