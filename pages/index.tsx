@@ -17,9 +17,9 @@ type Post = {
   updated_at: string;
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps<GetServerSideProps>() {
   const res = await query('SELECT * FROM posts');
-  const posts: Post[] = JSON.parse(JSON.stringify(res));
+  const posts: Post[] = res;
   return {
     props: {
       posts,
@@ -28,6 +28,8 @@ export async function getServerSideProps() {
 }
 
 const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
+  console.log(posts);
+
   return (
     <div className="flex flex-col items-center">
       <div className="flex justify-end p-4 min-w-[800px]">

@@ -12,10 +12,9 @@ const db = mysql({
 
 export default async function query( query: String ) {
   try {
-    await db.connect
     const results = await db.query(query);
     await db.end();
-    return results;
+    return JSON.parse(JSON.stringify(results));
   } catch (error) {
     return { error };
   }
