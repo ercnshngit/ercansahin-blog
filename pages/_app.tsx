@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Ercan Şahin</title>
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
       </Head>
       <Header />
       <Component {...pageProps} />

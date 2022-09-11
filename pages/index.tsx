@@ -8,6 +8,7 @@ import query from '@/lib/db';
 import type { GetServerSideProps, NextPage } from 'next';
 
 type Post = {
+  id: number;
   title: string;
   content: string;
   image: string;
@@ -50,7 +51,11 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
       <div>
         {posts &&
           posts.map((post: Post) => {
-            return <div className="text-white">{post.title}</div>;
+            return (
+              <div key={post.id} className="text-white">
+                {post.title}
+              </div>
+            );
           })}
       </div>
     </div>
