@@ -1,6 +1,6 @@
 import useDarkMode from 'hooks/useDarkMode';
 import Link from 'next/link';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 export default function Header() {
   const [colorTheme, setTheme] = useDarkMode();

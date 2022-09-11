@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-export default function useDarkMode() {
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined" ? localStorage.theme : "dark"
+export default function useDarkMode(): [theme:"dark"|"light", setTheme: Dispatch<SetStateAction<"dark"|"light">>] {
+  const [theme, setTheme]: [theme:"dark"|"light", setTheme: Dispatch<SetStateAction<"dark"|"light">>] = useState(
+    (typeof window !== "undefined" ? localStorage.theme : "dark")
   )
-  const colorTheme = theme === "dark" ? "light" : "dark"
+  const colorTheme: "dark"|"light" = (theme === "dark" ? "light" : "dark")
 
   useEffect(()=> {
-    const root = window.document.documentElement;
+    const root: HTMLElement = window.document.documentElement;
     root.classList.remove(colorTheme);
     root.classList.add(theme);
 
