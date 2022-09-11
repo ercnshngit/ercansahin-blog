@@ -1,1 +1,1 @@
-Deneme
+Personal blog
