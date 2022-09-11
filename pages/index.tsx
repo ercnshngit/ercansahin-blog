@@ -17,7 +17,7 @@ type Post = {
   updated_at: string;
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await query('SELECT * FROM posts');
   const posts: Post[] = JSON.parse(JSON.stringify(res));
   return {
